@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CD9D8807-D353-46F0-A067-D78E8AC3B038}</ProjectGuid>
+    <ProjectGuid>{BFA60A34-28C4-4B82-99AF-4545918071D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetworkExtension</RootNamespace>
-    <AssemblyName>NetworkExtension</AssemblyName>
+    <RootNamespace>Futura.ArcGIS.NetworkExtension</RootNamespace>
+    <AssemblyName>Futura.ArcGIS.NetworkExtension</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -40,21 +40,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="ESRI.ArcGIS.Desktop.AddIns">
       <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Framework">
       <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.System">
       <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -65,12 +93,57 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Config.esriaddinx</DependentUpon>
     </Compile>
+    <Compile Include="Core\Cartography.cs" />
+    <Compile Include="Core\Database.cs" />
+    <Compile Include="Core\DisplayMap.cs" />
+    <Compile Include="Core\GISApplication.cs" />
+    <Compile Include="Core\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities.cs" />
+    <Compile Include="DisplayFlowDirections.cs" />
+    <Compile Include="InsertionTools\CapacitorBank.cs" />
+    <Compile Include="InsertionTools\Consumer.cs" />
+    <Compile Include="InsertionTools\DistributionSource.cs" />
+    <Compile Include="InsertionTools\Feeder.cs" />
+    <Compile Include="InsertionTools\FuseBank.cs" />
+    <Compile Include="InsertionTools\Guys.cs" />
+    <Compile Include="InsertionTools\InsertionTool.cs" />
+    <Compile Include="InsertionTools\Interfaces.cs" />
+    <Compile Include="InsertionTools\Light.cs" />
+    <Compile Include="InsertionTools\OpenPoint.cs" />
+    <Compile Include="InsertionTools\PhaseDaigram.cs" />
+    <Compile Include="InsertionTools\PrimaryConductor.cs" />
+    <Compile Include="InsertionTools\RecloserBank.cs" />
+    <Compile Include="InsertionTools\RegulatorBank.cs" />
+    <Compile Include="InsertionTools\SecondaryConductor.cs" />
+    <Compile Include="InsertionTools\SectionalizerBank.cs" />
+    <Compile Include="InsertionTools\StepTransformerBank.cs" />
+    <Compile Include="InsertionTools\Structure.cs" />
+    <Compile Include="InsertionTools\SwitchBank.cs" />
+    <Compile Include="InsertionTools\TransformerBank.cs" />
+    <Compile Include="Network Tools\DownStreamAll.cs" />
+    <Compile Include="ExtensionInfo.cs" />
+    <Compile Include="Network Tools\FindDisconnected.cs" />
+    <Compile Include="Network Tools\FindLoops.cs" />
+    <Compile Include="Network Tools\FlowArrows.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SourceFiles\EditObject.cs" />
+    <Compile Include="SourceFiles\WorkspaceListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Network Tools\Tracing.cs" />
+    <Compile Include="Network Tools\TraceDown.cs" />
+    <Compile Include="Network Tools\TraceUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <AddInContent Include="Config.esriaddinx">
       <Generator>ArcGISAddInHostGenerator</Generator>
       <LastGenOutput>Config.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </AddInContent>
   </ItemGroup>
   <ItemGroup>
@@ -82,7 +155,216 @@
   <ItemGroup>
     <Reference Include="ESRI.ArcGIS.ArcMapUI">
       <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_stop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_form_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Canvas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapacitorBank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Consumer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DistributionPowerSource.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DistributionSource.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feeder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FuseBank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Light.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NeedleLeftYellow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenPoint.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhaseDiagram3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pole.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrimaryConductor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrimaryLine.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecloserBank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regulator2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruler_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruler_triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecondaryConductor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecondaryLine.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sectionalizer2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StepTransformerBank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Structure.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwitchBank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tables.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransformerBank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\InsertionTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\Consumer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\InsertionTool_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\SectionalizerBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\RecloserBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\SwitchBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\FuseBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\TransformerBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\StepTransformerBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\OpenPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\PrimaryConductor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\SecondaryConductor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\DistributionSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\CapacitorBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\Feeder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\Structure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\Guys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\PhaseDaigram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\RegulatorBank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\FlowArrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\Tracing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\FindLoops.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\FindDisconnected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\TraceUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\TraceDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\DownStreamAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FuturaNetwork\FuturaNetwork.csproj">
+      <Project>{dc106f6d-bd2c-46c5-9ff6-dc3118d88b17}</Project>
+      <Name>FuturaNetwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UndoRedoFramework\UndoRedoFramework.csproj">
+      <Project>{641578c7-4522-4158-867a-30aecbb3ee73}</Project>
+      <Name>UndoRedoFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <ZipFileExtension>esriAddIn</ZipFileExtension>

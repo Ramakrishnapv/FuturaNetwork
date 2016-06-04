@@ -6,15 +6,75 @@
   <Image>Images\NetworkExtension.png</Image>
   <Author>ramakrishnapv</Author>
   <Company>Futura Systems</Company>
-  <Date>3/28/2016</Date>
+  <Date>4/18/2016</Date>
   <Targets>
     <Target name="Desktop" version="10.3" />
   </Targets>
-  <AddIn language="CLR4.5" library="NetworkExtension.dll" namespace="NetworkExtension">
+  <AddIn language="CLR4.0" library="Futura.ArcGIS.NetworkExtension.dll" namespace="Futura.ArcGIS.NetworkExtension">
     <ArcMap>
       <Extensions>
         <Extension id="Futura_Systems_NetworkExtension_FuturaNetWorkExt" class="FuturaNetWorkExt" productName="FuturaGIS" showInExtensionDialog="true" autoLoad="true" />
       </Extensions>
+      <Commands>
+        <Tool id="Futura_Systems_NetworkExtension_Consumer" class="Futura.ArcGIS.NetworkExtension.Consumer" message="Add new consumer." caption="Consumer" tip="Consumer" category="FuturaGIS" image="Images\Consumer.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_SectionalizerBank" class="Futura.ArcGIS.NetworkExtension.SectionalizerBank" message="Add new SectionalizerBank" caption="SectionalizerBank" tip="SectionalizerBank" category="FuturaGIS" image="Images\SectionalizerBank.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_RecloserBank" class="Futura.ArcGIS.NetworkExtension.RecloserBank" message="Add new RecloserBank" caption="RecloserBank" tip="RecloserBank" category="FuturaGIS" image="Images\RecloserBank.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_SwitchBank" class="Futura.ArcGIS.NetworkExtension.SwitchBank" message="Add new SwitchBank" caption="SwitchBank" tip="SwitchBank" category="FuturaGIS" image="Images\SwitchBank.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_FuseBank" class="Futura.ArcGIS.NetworkExtension.FuseBank" message="Add new FuseBank" caption="FuseBank" tip="FuseBank" category="FuturaGIS" image="Images\FuseBank.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_TransformerBank" class="Futura.ArcGIS.NetworkExtension.TransformerBank" message="Add new TransformerBank" caption="TransformerBank" tip="TransformerBank" category="FuturaGIS" image="Images\TransformerBank.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_StepTransformerBank" class="Futura.ArcGIS.NetworkExtension.StepTransformerBank" message="Add new StepTransformerBank" caption="StepTransformerBank" tip="StepTransformerBank" category="FuturaGIS" image="Images\StepTransformerBank.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_OpenPoint" class="Futura.ArcGIS.NetworkExtension.OpenPoint" message="Add new OpenPoint" caption="OpenPoint" tip="OpenPoint" category="FuturaGIS" image="Images\OpenPoint.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_PrimaryConductor" class="Futura.ArcGIS.NetworkExtension.PrimaryConductor" message="Add new PrimaryConductor" caption="PrimaryConductor" tip="PrimaryConductor" category="FuturaGIS" image="Images\PrimaryConductor.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_SecondaryConductor" class="Futura.ArcGIS.NetworkExtension.SecondaryConductor" message="Add new SecondaryConductor" caption="SecondaryConductor" tip="SecondaryConductor" category="FuturaGIS" image="Images\SecondaryConductor.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_DistributionSource" class="Futura.ArcGIS.NetworkExtension.DistributionSource" message="Add new DistributionSource" caption="DistributionSource" tip="DistributionSource" category="FuturaGIS" image="Images\DistributionSource.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_CapacitorBank" class="Futura.ArcGIS.NetworkExtension.CapacitorBank" message="Add new CapacitorBank" caption="CapacitorBank" tip="CapacitorBank" category="FuturaGIS" image="Images\CapacitorBank.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_Feeder" class="Futura.ArcGIS.NetworkExtension.Feeder" message="Add new Feeder" caption="Feeder" tip="Feeder" category="FuturaGIS" image="Images\Feeder.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_Structure" class="Futura.ArcGIS.NetworkExtension.Structure" message="Add new Structure" caption="Structure" tip="Structure" category="FuturaGIS" image="Images\Structure.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_Light" class="Futura.ArcGIS.NetworkExtension.Light" message="Add new Light" caption="Light" tip="Light" category="FuturaGIS" image="Images\Light.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_Guys" class="Futura.ArcGIS.NetworkExtension.Guys" message="Add new Guys" caption="Guys" tip="Guys" category="FuturaGIS" image="Images\Guys.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_PhaseDaigram" class="Futura.ArcGIS.NetworkExtension.PhaseDaigram" message="Add new PhaseDaigram" caption="PhaseDaigram" tip="PhaseDaigram" category="FuturaGIS" image="Images\PhaseDaigram.png" onDemand="false" />
+        <Tool id="Futura_Systems_NetworkExtension_RegulatorBank" class="Futura.ArcGIS.NetworkExtension.RegulatorBank" message="Add new RegulatorBank" caption="RegulatorBank" tip="RegulatorBank" category="FuturaGIS" image="Images\RegulatorBank.png" onDemand="false" />
+        <Button id="Futura_Systems_NetworkExtension_FlowArrows" class="FlowArrows" message="Turn on/off Flow Arrows" caption="Turn on/off Flow Arrows" tip="Turn on/off Flow Arrows" category="Network Tools" image="Images\FlowArrows.png" onDemand="false" />
+        <Button id="Futura_Systems_NetworkExtension_FindLoops" class="FindLoops" message="Find Loops" caption="Find Loops" tip="Find Loops" category="Network Tools" image="Images\FindLoops.png" onDemand="false" />
+        <Button id="Futura_Systems_NetworkExtension_FindDisconnected" class="FindDisconnected" message="Find Disconnected" caption="Find Disconnected" tip="Find Disconnected" category="Network Tools" image="Images\FindDisconnected.png" onDemand="false" />
+        <Button id="Futura_Systems_NetworkExtension_TraceUp" class="TraceUp" message="TraceUp" caption="TraceUp" tip="TraceUp" category="Network Tools" image="Images\TraceUp.png" onDemand="false" />
+        <Button id="Futura_Systems_NetworkExtension_TraceDown" class="TraceDown" message="TraceDown" caption="TraceDown" tip="TraceDown" category="Network Tools" image="Images\TraceDown.png" onDemand="false" />
+        <Button id="Futura_Systems_NetworkExtension_DownStreamAll" class="DownStreamAll" message="Add-in command generated by Visual Studio project wizard." caption="DownStreamAll" tip="Add-in command tooltip." category="Network Tools" image="Images\DownStreamAll.png" onDemand="false" />
+      </Commands>
+      <Toolbars>
+        <Toolbar id="Futura_Systems_NetworkExtension_Insertion_Toolbar" caption="Insertion Toolbar" showInitially="true">
+          <Items>
+            <Tool refID="Futura_Systems_NetworkExtension_SectionalizerBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_RegulatorBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_Feeder" />
+            <Tool refID="Futura_Systems_NetworkExtension_Consumer" />
+            <Tool refID="Futura_Systems_NetworkExtension_SwitchBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_CapacitorBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_OpenPoint" />
+            <Tool refID="Futura_Systems_NetworkExtension_Structure" />
+            <Tool refID="Futura_Systems_NetworkExtension_StepTransformerBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_PrimaryConductor" />
+            <Tool refID="Futura_Systems_NetworkExtension_DistributionSource" />
+            <Tool refID="Futura_Systems_NetworkExtension_SecondaryConductor" />
+            <Tool refID="Futura_Systems_NetworkExtension_Guys" />
+            <Tool refID="Futura_Systems_NetworkExtension_PhaseDaigram" />
+            <Tool refID="Futura_Systems_NetworkExtension_FuseBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_TransformerBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_RecloserBank" />
+            <Tool refID="Futura_Systems_NetworkExtension_Light" />
+          </Items>
+        </Toolbar>
+        <Toolbar id="Futura_Systems_NetworkExtension_Network_Toolbar" caption="Network Toolbar" showInitially="true">
+          <Items>
+            <Button refID="Futura_Systems_NetworkExtension_FlowArrows" />
+            <Button refID="Futura_Systems_NetworkExtension_FindLoops" />
+            <Button refID="Futura_Systems_NetworkExtension_FindDisconnected" />
+            <Button refID="Futura_Systems_NetworkExtension_TraceUp" />
+            <Button refID="Futura_Systems_NetworkExtension_TraceDown" />
+            <Button refID="Futura_Systems_NetworkExtension_DownStreamAll" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
     </ArcMap>
   </AddIn>
 </ESRI.Configuration>

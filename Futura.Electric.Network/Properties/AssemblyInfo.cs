@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NetworkExtension")]
+[assembly: AssemblyTitle("Futura.Electric.Network")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NetworkExtension")]
+[assembly: AssemblyProduct("Futura.Electric.Network")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c32f9806-f719-41ae-b208-dd5065f49125")]
+[assembly: Guid("02c0e77a-139a-4ce2-b92b-702af729dc74")]
 
 // Version information for an assembly consists of the following four values:
 //
